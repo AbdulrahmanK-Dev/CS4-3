@@ -22,7 +22,7 @@ public class HomeController {
         this.appointmentService = appointmentService;
     }
 
-    // Customer home page — quick links + upcoming appointments preview
+
     @GetMapping("/layout")
     public String customerHome(@AuthenticationPrincipal UserDetails principal, Model model) {
         User customer = userService.findByUsername(principal.getUsername())
